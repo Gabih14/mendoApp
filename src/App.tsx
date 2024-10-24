@@ -21,7 +21,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Router basename='/mendoApp'>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="flex flex-col min-h-screen">
         <header className="bg-blue-600 text-white p-4">
           <div className="container mx-auto flex justify-between items-center">
