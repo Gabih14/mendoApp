@@ -26,7 +26,8 @@ const Gastronomia: React.FC = () => {
     {
       title: 'Restaurantes',
       description: 'Explora una variedad de cocinas, desde la tradicional mendocina hasta propuestas internacionales innovadoras.',
-      icon: <Utensils className="w-6 h-6 text-red-600" />
+      icon: <Utensils className="w-6 h-6 text-red-600" />,
+      path: '/restaurantes'  // Asegura que tenga el 'path' de destino
     },
     {
       title: 'Bares',

@@ -7,6 +7,7 @@ import RutasRecomendadas from './components/RutasRecomendadas';
 import LugaresTuristicos from './components/LugaresTuristicos';
 import Bodegas from './components/Bodegas';
 import Cafes from './components/Cafes';
+import Restaurantes from './components/Restaurantes';
 
 const menuItems = [
   { title: 'Eventos', icon: <MapPin className="w-6 h-6" />, path: '/eventos' },
@@ -14,7 +15,7 @@ const menuItems = [
   { title: 'Rutas recomendadas', icon: <RouteIcon className="w-6 h-6" />, path: '/rutas' },
   { title: 'Lugares turísticos', icon: <Landmark className="w-6 h-6" />, path: '/lugares' },
   { title: 'Bodegas', icon: <Wine className="w-6 h-6" />, path: '/bodegas' },
-  { title: 'Cafés', icon: <Coffee className="w-6 h-6" />, path: '/cafes' },
+  /* { title: 'Cafés', icon: <Coffee className="w-6 h-6" />, path: '/cafes' }, */
 ];
 
 function App() {
@@ -70,6 +71,7 @@ function App() {
             <Route path="/lugares" element={<LugaresTuristicos />} />
             <Route path="/bodegas" element={<Bodegas />} />
             <Route path="/cafes" element={<Cafes />} />
+            <Route path="/restaurantes" element={<Restaurantes />} />
           </Routes>
         </main>
 
