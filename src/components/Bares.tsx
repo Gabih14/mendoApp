@@ -94,7 +94,7 @@ const Bares: React.FC = () => {
 
     return (
         <div className="space-y-8">
-            <h2 className="text-3xl font-bold mb-6">Bares recomendados</h2>
+            <h2 className="text-3xl font-bold mb-6 mt-5">Bares recomendados</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {bares.map((bar, index) => (
                     <BarCard key={index} {...bar} />
