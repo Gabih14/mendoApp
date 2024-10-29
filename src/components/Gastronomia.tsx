@@ -32,7 +32,8 @@ const Gastronomia: React.FC = () => {
     {
       title: 'Bares',
       description: 'Descubre la vibrante escena nocturna de Mendoza con bares que ofrecen cócteles artesanales y cervezas locales.',
-      icon: <Beer className="w-6 h-6 text-yellow-600" />
+      icon: <Beer className="w-6 h-6 text-yellow-600" />,
+      path:'/bares'
     }
   ];
 

@@ -8,6 +8,7 @@ import LugaresTuristicos from './components/LugaresTuristicos';
 import Bodegas from './components/Bodegas';
 import Cafes from './components/Cafes';
 import Restaurantes from './components/Restaurantes';
+import Bares from './components/Bares';
 
 const menuItems = [
   { title: 'Eventos', icon: <MapPin className="w-6 h-6" />, path: '/eventos' },
@@ -72,6 +73,7 @@ function App() {
             <Route path="/bodegas" element={<Bodegas />} />
             <Route path="/cafes" element={<Cafes />} />
             <Route path="/restaurantes" element={<Restaurantes />} />
+            <Route path="/bares" element={<Bares />} />
           </Routes>
         </main>
 
