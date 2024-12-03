@@ -11,11 +11,11 @@ import Restaurantes from './components/Restaurantes';
 import Bares from './components/Bares';
 
 const menuItems = [
-  { title: 'Eventos', icon: <MapPin className="w-6 h-6" />, path: '/eventos' },
-  { title: 'Gastronomía', icon: <Utensils className="w-6 h-6" />, path: '/gastronomia' },
-  { title: 'Rutas recomendadas', icon: <RouteIcon className="w-6 h-6" />, path: '/rutas' },
-  { title: 'Lugares turísticos', icon: <Landmark className="w-6 h-6" />, path: '/lugares' },
-  { title: 'Bodegas', icon: <Wine className="w-6 h-6" />, path: '/bodegas' },
+  { title: 'EVENTOS', icon: <MapPin className="w-6 h-6" />, path: '/eventos' },
+  { title: 'GASTRONOMÍA', icon: <Utensils className="w-6 h-6" />, path: '/gastronomia' },
+  { title: 'RUTAS RECOMENDADAS', icon: <RouteIcon className="w-6 h-6" />, path: '/rutas' },
+  { title: 'LUGARES TURÍSTICOS', icon: <Landmark className="w-6 h-6" />, path: '/lugares' },
+  { title: 'BODEGAS', icon: <Wine className="w-6 h-6" />, path: '/bodegas' },
   /* { title: 'Cafés', icon: <Coffee className="w-6 h-6" />, path: '/cafes' }, */
 ];
 
@@ -25,9 +25,9 @@ function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <div className="flex flex-col min-h-screen">
-        <header className="bg-blue-600 text-white p-4">
-          <div className="container mx-auto flex justify-between items-center">
-            <Link to="/" className="text-2xl font-bold">MendoApp</Link>
+        <header className="bg-primary text-white p-4">
+          <div className="mx-auto flex justify-between items-center">
+            <Link to="/" className="text-2xl font-bold ml-7">MendoApp</Link>
             <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -35,9 +35,9 @@ function App() {
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
             {/* mapeo de elementos del menú superior */}
-            <nav className="hidden md:flex space-x-4">
+            <nav className="hidden md:flex space-x-5 mr-7">
               {menuItems.map((item, index) => (
-                <Link key={index} to={item.path} className="hover:text-blue-200 transition-colors duration-200">
+                <Link key={index} to={item.path} className="hover:text-[#f0d3d6] transition-colors duration-200">
                   {item.title}
                 </Link>
               ))}
@@ -47,12 +47,12 @@ function App() {
 
         {/* Mapeo de las cards */}
         {isMenuOpen && (
-          <div className="md:hidden bg-blue-500 text-white">
+          <div className="md:hidden bg-primary text-white">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
                 to={item.path}
-                className="block p-4 hover:bg-blue-600 transition-colors duration-200 flex items-center"
+                className="block p-4 hover:bg-primary transition-colors duration-200 flex items-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.icon}
@@ -63,7 +63,7 @@ function App() {
         )}
 
         {/* Rutas de las págians */}
-        <main className="flex-grow container mx-auto mt-8 p-4">
+        <main className="flex-grow mx-auto ">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/eventos" element={<EventosCapitalGodoy />} />
@@ -77,7 +77,7 @@ function App() {
           </Routes>
         </main>
 
-        <footer className="bg-gray-800 text-white mt-auto py-8">
+        <footer className="bg-primary text-white mt-auto py-8">
           <div className="container mx-auto text-center">
             <p>&copy; 2024 MendoApp. Todos los derechos reservados.</p>
           </div>
@@ -90,20 +90,44 @@ function App() {
 function Home() {
   return (
     <>
+      {/* Imagen */}
+      <div className="relative w-full h-[60vh] mb-12overflow-hidden">
+        <img
+          src="https://mdzrentacar.com/wp-content/uploads/2023/11/kym-ellis-aF1NPSnDQLw-unsplash-1-scaled.webp"
+          alt="Vino mendocino"
+          className="w-full h-full object-cover object-[50%_40%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+          <div className="p-8 text-white max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Descubre la magia de Mendoza
+            </h1>
+            <p className="text-xl hidden md:block md:text-2xl">
+              MendoApp, tu guía digital para explorar esta región famosa por sus viñedos, montañas imponentes y rica cultura.
+              Utiliza nuestras secciones para planificar tu visita perfecta.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* Imagen */}
+
       <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-4 mt-5">Bienvenidos a MendoApp</h2>
-        <p className="text-lg">
+        <h2 className="text-3xl font-bold mb-4 mt-5 text-primary ml-10">Bienvenidos a MendoApp</h2>
+
+        {/* <p className="text-lg">
           Descubre la belleza de Mendoza con MendoApp, tu guía digital para explorar esta región famosa por sus viñedos, montañas imponentes y rica cultura.
           Utiliza nuestras secciones para planificar tu visita perfecta.
-        </p>
+        </p> */}
       </section>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 p-6">
         {menuItems.map((item, index) => (
           <Link key={index} to={item.path} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
             <div className="flex items-center mb-4">
-              {item.icon}
-              <h3 className="text-xl font-semibold ml-2">{item.title}</h3>
+              <div className="text-primary group-hover:text-[#4a1a20] transition-colors duration-200">
+                {item.icon}
+              </div>
+              <h3 className="text-xl font-semibold ml-2 text-primary group-hover:text-[#4a1a20] transition-colors duration-200">{item.title}</h3>
             </div>
             <p className="text-gray-600">
               Explora {item.title.toLowerCase()} y descubre lo mejor que Mendoza tiene para ofrecer con MendoApp.

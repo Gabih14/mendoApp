@@ -38,7 +38,7 @@ const Gastronomia: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 p-10">
       <h2 className="text-3xl font-bold mb-6 mt-5">Gastronomía con garantía MendoApp</h2>
       <p className="text-lg mb-8">
         Descubre los mejores sabores de Mendoza con nuestra selección de restaurantes y experiencias culinarias.

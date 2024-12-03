@@ -2,7 +2,7 @@ import React from 'react';
 
 const EventosCapitalGodoy: React.FC = () => {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 p-10">
       <h2 className="text-3xl font-bold mb-6 mt-5">Eventos en Capital - Godoy Cruz</h2>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
