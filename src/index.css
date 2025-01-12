@@ -13,7 +13,7 @@ body {
   padding: 0 1rem;
 }
 
-/* EN DESARROLO */ 
+/* EN DESARROLO HAMSTER */ 
 .wheel-and-hamster {
   --dur: 1s;
   position: relative;
@@ -285,4 +285,13 @@ body {
   to {
     transform: rotate(-1turn);
   }
+}
+
+/* HAMSTER FIN */
+
+@media screen and (min-width: 781px) {
+  .gastronomia{
+    height: 170px;
+  }
+  
 }

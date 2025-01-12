@@ -9,6 +9,7 @@ import Bodegas from './components/Bodegas';
 import Cafes from './components/Cafes';
 import Restaurantes from './components/Restaurantes';
 import Bares from './components/Bares';
+import ImageCarousel from './components/ImageCarousel';
 
 const menuItems = [
   { title: 'EVENTOS', icon: <MapPin className="w-6 h-6" />, path: '/eventos' },
@@ -90,28 +91,10 @@ function App() {
 function Home() {
   return (
     <>
-      {/* Imagen */}
-      <div className="relative w-full h-[60vh] mb-12overflow-hidden">
-        <img
-          src="https://mdzrentacar.com/wp-content/uploads/2023/11/kym-ellis-aF1NPSnDQLw-unsplash-1-scaled.webp"
-          alt="Vino mendocino"
-          className="w-full h-full object-cover object-[50%_40%]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-          <div className="p-8 text-white max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Descubre la magia de Mendoza
-            </h1>
-            <p className="text-xl hidden md:block md:text-2xl">
-              MendoApp, tu guía digital para explorar esta región famosa por sus viñedos, montañas imponentes y rica cultura.
-              Utiliza nuestras secciones para planificar tu visita perfecta.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* Imagen */}
+      <ImageCarousel />
 
-      <section className="mb-12">
+
+      <section className="mb-5 p-8">
         <h2 className="text-3xl font-bold mb-4 mt-5 text-primary ml-10">Bienvenidos a MendoApp</h2>
 
         {/* <p className="text-lg">

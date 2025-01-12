@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';  // Asegúrate de importar 'Link'
 const GastronomiaCard: React.FC<{ title: string; description: string; icon: React.ReactNode; path?: string }> = ({ title, description, icon, path }) => (
   // Envuelve la card en un Link si hay un 'path' proporcionado
   <Link to={path || '#'} className="block">
-    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200">
+    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200 gastronomia">
       <div className="flex items-center mb-4">
         {icon}
         <h3 className="text-xl font-semibold ml-2">{title}</h3>
